@@ -1,5 +1,6 @@
 {
   "name": "geschichte-nationalsozialismus",
+  "homepage": "https://SinusNatter8123.github.io/geschichte-nationalsozialismus",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,11 +8,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+  
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+ 
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.10",
     "framer-motion": "^12.18.1",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.515.0",
     "postcss": "^8.5.5",
     "react": "^19.1.0",
