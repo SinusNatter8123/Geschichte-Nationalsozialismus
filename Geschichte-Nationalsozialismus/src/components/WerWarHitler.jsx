@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import HitlerImage from "../assets/Hitler.jpeg"; // Pfad zum Bild anpassen
 
 export default function WerWarHitler() {
   const [open, setOpen] = useState(false);
@@ -42,7 +43,7 @@ export default function WerWarHitler() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <span className="text-slate-400 italic text-sm">[Platzhalter für Bild]</span>
+          <img src={HitlerImage} alt="Adolf Hitler" className="w-full h-full object-cover rounded-xl" />
         </motion.div>
       </div>
 
@@ -60,23 +61,31 @@ export default function WerWarHitler() {
           />
         </button>
 
-        {open && (
+        {open && (<>
           <motion.ul
-            className="mt-4 text-gray-400 text-base leading-relaxed list-disc list-inside space-y-1"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            <li><strong>1889:</strong> Geburt in Braunau am Inn (Österreich-Ungarn)</li>
-            <li><strong>1907–1913:</strong> Aufenthalt in Wien, Ablehnung an der Kunstakademie</li>
-            <li><strong>1914–1918:</strong> Meldegänger im Ersten Weltkrieg</li>
-            <li><strong>1920:</strong> Eintritt in die NSDAP</li>
-            <li><strong>1923:</strong> Hitler-Putsch in München, Verurteilung zu Haft</li>
-            <li><strong>1924:</strong> „Mein Kampf“ im Gefängnis verfasst</li>
-            <li><strong>1933:</strong> Ernennung zum Reichskanzler, Machtübernahme</li>
-            <li><strong>1939:</strong> Beginn des Zweiten Weltkriegs</li>
-            <li><strong>1945:</strong> Suizid in Berlin kurz vor Kriegsende</li>
-          </motion.ul>
+  className="mt-4 text-gray-400 text-base leading-relaxed list-disc list-inside space-y-1"
+  initial={{ opacity: 0, y: -10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.4 }}
+>
+  <li><strong>1889:</strong> Geburt in Braunau am Inn (Österreich-Ungarn)</li>
+  <li><strong>1907–1913:</strong> Aufenthalt in Wien, Ablehnung an der Kunstakademie</li>
+  <li><strong>1914–1918:</strong> Meldegänger im Ersten Weltkrieg</li>
+  <li><strong>1920:</strong> Eintritt in die NSDAP</li>
+  <li><strong>1923:</strong> Hitler-Putsch in München, Verurteilung zu Haft</li>
+  <li>
+    <strong>1924:</strong> <span>„Mein Kampf“<sup className="text-xs align-super text-gray-500">¹</sup> im Gefängnis verfasst</span>
+  </li>
+  <li><strong>1933:</strong> Ernennung zum Reichskanzler, Machtübernahme</li>
+  <li><strong>1939:</strong> Beginn des Zweiten Weltkriegs</li>
+  <li><strong>1945:</strong> Suizid in Berlin kurz vor Kriegsende</li>
+</motion.ul>
+
+{/* Fußnote */} 
+<p className="mt-4 text-sm text-gray-500 italic">
+  ¹ „Mein Kampf“ war ein ideologisches Propagandawerk Hitlers, in dem er seine antisemitische Weltanschauung und politische Ziele darlegte. Das Buch bildete eine geistige Grundlage für den Holocaust.
+</p></>
+
         )}
       </div>
     </section>

@@ -1,61 +1,66 @@
-import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 export default function RechtsgrundlagenSection() {
-  return (
-    <section className="bg-slate-900 text-gray-300 py-20 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto space-y-20">
-        {/* Große Hauptüberschrift */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold border-b-4 border-red-600 pb-2 mb-6"
-        >
-          Rechtsgrundlagen & Strafen
-        </motion.h2>
+  const [open, setOpen] = useState(false);
 
-        {/* Block 1 */}
+  return (
+    <section className="bg-slate-900 text-white py-20 px-6 md:px-20">
+      <div className="max-w-4xl mx-auto space-y-16">
+
+        {/* Abschnitt 1: Historischer Kontext */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-xl mx-auto"
         >
-          <h3 className="text-xl font-semibold text-red-500 mb-4 border-b border-red-500 pb-1">
-            Aus der Geschichte gelernt
-          </h3>
-          <p className="text-lg leading-relaxed mb-4">
-            Nach dem Ende der NS-Zeit war klar: So etwas darf nie wieder passieren. Deshalb wurde frühzeitig ein rechtlicher Rahmen geschaffen, um das Verbreiten nationalsozialistischer Inhalte konsequent zu unterbinden.
+          <h2 className="text-3xl md:text-4xl font-bold border-b-4 border-red-600 pb-2 mb-6">
+            Rechtsgrundlagen & Strafen
+          </h2>
+          <h3 className="text-xl font-semibold text-red-500 mb-3">Aus der Geschichte gelernt</h3>
+          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            Die nationalsozialistische Gewaltherrschaft endete 1945 – doch ihr Schatten wirkte
+            nach. In Deutschland wurde deshalb früh ein rechtlicher Rahmen geschaffen, um
+            Wiederholungen zu verhindern. Das Grundgesetz verbietet den Aufbau einer
+            totalitären Ideologie, und daraus leiten sich zahlreiche Schutzgesetze ab.
           </p>
-          <blockquote className="border-l-4 border-gray-600 pl-4 italic text-gray-400 text-sm">
+          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            Besonders der Umgang mit nationalsozialistischen Symbolen wurde streng geregelt.
+            Damit soll nicht nur verhindert werden, dass rechtsextreme Gruppen alte
+            Kennzeichen für neue Propaganda nutzen – sondern auch die Erinnerung an die
+            Opfer geschützt bleiben.
+          </p>
+          <blockquote className="border-l-4 border-gray-600 pl-4 italic text-gray-400 text-sm mt-4">
             „Wer aus der Geschichte nicht lernt, ist dazu verdammt, sie zu wiederholen.“ – George Santayana
           </blockquote>
         </motion.div>
 
-        {/* Block 2 */}
+        {/* Abschnitt 2: Gesetzliche Lage */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-xl mx-auto"
+          transition={{ duration: 0.6 }}
         >
-          <h3 className="text-xl font-semibold text-red-500 mb-4 border-b border-red-500 pb-1">
-            Was heute gilt – §86a StGB
-          </h3>
-          <p className="text-lg leading-relaxed mb-4">
-            Das Verwenden von Kennzeichen verfassungswidriger Organisationen ist in Deutschland verboten. Dazu zählen Symbole wie das Hakenkreuz, SS-Runen oder auch Zahlencodes wie „88“ oder „18“.
+          <h3 className="text-xl font-semibold text-red-500 mb-3">Was heute gilt – §86a StGB</h3>
+          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            In der Bundesrepublik Deutschland regelt §86a des Strafgesetzbuches die
+            Verwendung von Kennzeichen verfassungswidriger Organisationen. Dazu zählen
+            insbesondere Symbole des Nationalsozialismus – wie das Hakenkreuz, das SS-Zeichen
+            oder auch scheinbar harmlose Codes wie <span className="text-red-400 font-semibold">„88“</span> (für HH = Heil Hitler).
           </p>
-          <p className="text-lg leading-relaxed mb-4">
-            Solche Zeichen dürfen nur in einem klaren Kontext wie z. B. Aufklärung, Kunst oder Wissenschaft gezeigt werden.
+          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            Die Verwendung solcher Symbole ist grundsätzlich <span className="font-medium text-white">verboten</span>. Nur in
+            besonderen Ausnahmefällen – etwa im Kontext der <span className="text-gray-200 font-medium">politischen Bildung,
+            Kunst, Wissenschaft oder Berichterstattung</span> – kann die Darstellung erlaubt
+            sein. Das entscheidet im Zweifel ein Gericht.
           </p>
-          <blockquote className="bg-slate-800 rounded-md p-4 text-sm text-red-400 border-l-4 border-red-600 font-mono">
+          <blockquote className="bg-slate-800 rounded-md p-4 text-sm text-red-400 border-l-4 border-red-600 font-mono my-6">
             „Mit Freiheitsstrafe bis zu drei Jahren oder mit Geldstrafe wird bestraft, wer Kennzeichen verfassungswidriger Organisationen verbreitet oder öffentlich verwendet.“
           </blockquote>
-          <p className="text-sm text-gray-400 mt-2">
+          <p className="text-sm text-gray-400">
             Quelle:{" "}
             <a
               href="https://www.gesetze-im-internet.de/stgb/__86a.html"
@@ -68,55 +73,64 @@ export default function RechtsgrundlagenSection() {
           </p>
         </motion.div>
 
-        {/* Block 3 */}
+        {/* Abschnitt 3: Konsequenzen */}
         <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6, delay: 0.2 }}
-  className="max-w-xl mx-auto bg-slate-900 "
->
-  <h3 className="text-xl font-semibold text-red-500 mb-6 border-b border-red-500 pb-2">
-    Konsequenzen bei Verstößen
-  </h3>
-  <p className="text-lg leading-relaxed mb-6">
-    Wer nationalsozialistische Symbole öffentlich verwendet – sei es im Netz, auf Kleidung oder in Gesprächen – macht sich strafbar. Auch wenn es „nur ein Scherz“ war.
-  </p>
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3 className="text-xl font-semibold text-red-500 mb-3">Konsequenzen bei Verstößen</h3>
+          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            Wer nationalsozialistische Symbole öffentlich verwendet – sei es im Internet, auf
+            Kleidung oder in Gesprächen – macht sich strafbar. Auch wenn es aus Unwissenheit
+            oder „nur als Scherz“ geschieht, schützt das nicht vor Konsequenzen.
+          </p>
 
-  <ul className="space-y-4 text-gray-300">
-    <li className="flex items-start gap-3">
-      <span className=" mt-1 w-6 h-6 bg-red-600 rounded-full text-white flex items-center justify-center font-bold select-none">
-        !
-      </span>
-      <span>Polizeiliche Ermittlungen und Strafanzeige</span>
-    </li>
-    <li className="flex items-start gap-3">
-      <span className=" mt-1 w-6 h-6 bg-red-600 rounded-full text-white flex items-center justify-center font-bold select-none">
-        ⚖️
-      </span>
-      <span className="font-semibold text-red-400">
-        Freiheitsstrafe bis zu 3 Jahren oder Geldstrafe
-      </span>
-    </li>
-    <li className="flex items-start gap-3">
-      <span className=" mt-1 w-6 h-6 bg-red-600 rounded-full text-white flex items-center justify-center font-bold select-none">
-        📄
-      </span>
-      <span>Eintrag ins Führungszeugnis</span>
-    </li>
-    <li className="flex items-start gap-3">
-      <span className=" mt-1 w-6 h-6 bg-red-600 rounded-full text-white flex items-center justify-center font-bold select-none">
-        🚫
-      </span>
-      <span>Probleme bei Ausbildung, Beruf, Reisen</span>
-    </li>
-  </ul>
+          <ul className="list-disc list-inside text-gray-300 text-base space-y-2 mb-6">
+            <li><strong>Polizeiliche Ermittlungen:</strong> Strafanzeige und Vernehmung</li>
+            <li><strong>Strafrechtliche Folgen:</strong> Geldstrafe oder Freiheitsstrafe bis zu 3 Jahren</li>
+            <li><strong>Eintrag ins Führungszeugnis:</strong> Nachweisbar für Arbeitgeber & Behörden</li>
+            <li><strong>Langfristige Konsequenzen:</strong> Einschränkungen bei Ausbildung, Beruf & Reisen</li>
+          </ul>
 
-  <p className=" text-gray-400 text-2xl mt-8 italic">
-    Die Gesetze dienen dem Schutz der Demokratie – und der Würde der Millionen Opfer.
-  </p>
-</motion.div>
+          <p className="italic text-xl text-gray-300 mt-6">
+            Die Gesetze dienen dem Schutz der Demokratie – und der Würde von Millionen
+            Ermordeten.
+          </p>
+        </motion.div>
 
+        {/* Accordion: Wusstest du schon? */}
+        <div className="border-t border-slate-700 pt-6">
+          <button
+            onClick={() => setOpen(!open)}
+            className="w-full flex justify-between items-center text-left text-lg font-medium text-slate-200 hover:text-red-500 transition-colors"
+          >
+            Wusstest du schon?
+            <ChevronDown
+              className={`h-5 w-5 transform transition-transform ${open ? "rotate-180" : ""}`}
+            />
+          </button>
+
+          {open && (
+            <motion.div
+              className="mt-4 text-gray-400 text-base leading-relaxed space-y-4"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <p>
+                Auch viele moderne Neonazi-Gruppen nutzen <span className="text-red-400 font-semibold">verschlüsselte Zeichen</span>,
+                um das Gesetz zu umgehen. Darum werden selbst scheinbar harmlose
+                Zahlenkombinationen wie „18“ oder „88“ oft strafrechtlich verfolgt.
+              </p>
+              <p>
+                Die Polizei und der Verfassungsschutz beobachten die Szene genau – und
+                auch online hinterlässt jeder Klick Spuren.
+              </p>
+            </motion.div>
+          )}
+        </div>
       </div>
     </section>
   );

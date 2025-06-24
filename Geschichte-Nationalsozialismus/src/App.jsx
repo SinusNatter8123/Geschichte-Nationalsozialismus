@@ -13,6 +13,7 @@ import VerfolgungHolocaust from './components/VerfolgungHolocaust'
 import VerboteneSymboleSection from './components/VerboteneSymbole'
 import RechtsgrundlageSection from './components/Rechtsgrundlage'
 import Quiz from './components/Quiz'
+import WeiteresMaterialSection from './components/weiteresMaterial'
 
 function App() {
 
@@ -37,7 +38,9 @@ function App() {
         <Transition2 />
         <Quiz />
         <Transition1 />
-        <footer className="bg-slate-900 text-gray-400 text-xs p-4 text-center py-10">
+        <WeiteresMaterialSection />
+        <Transition2 />
+        <footer className="bg-slate-950 text-gray-400 text-xs p-4 text-center py-10">
           <p>© 2025 Geschichtsunterricht GK Hofer</p>
           <p>Alle Rechte vorbehalten.</p>
 

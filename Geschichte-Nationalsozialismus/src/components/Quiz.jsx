@@ -35,7 +35,49 @@ const quizData = [
     ],
     answerIndex: 0,
   },
+  {
+    question: "Welche Organisation war für die systematische Ermordung der jüdischen Bevölkerung verantwortlich?",
+    options: ["Die SS", "Die Wehrmacht", "Die Gestapo"],
+    answerIndex: 0,
+  },
+  {
+    question: "Warum ist das öffentliche Zeigen des Hakenkreuzes in Deutschland verboten?",
+    options: [
+      "Weil es ein verfassungswidriges Symbol des Nationalsozialismus ist",
+      "Weil es nur zu Dokumentationszwecken erlaubt ist",
+      "Weil es nur an Karnevalstagen getragen werden darf",
+    ],
+    answerIndex: 0,
+  },
+  {
+    question: "Was bedeutet der Begriff „Holocaust“?",
+    options: [
+      "Die systematische Vernichtung von Millionen Menschen durch die Nazis",
+      "Die friedliche Auswanderung jüdischer Menschen aus Europa",
+      "Eine Wirtschaftskrise während der NS-Zeit",
+    ],
+    answerIndex: 0,
+  },
+  {
+    question: "Welche Bedeutung hatte der 'Führerkult' im Nationalsozialismus?",
+    options: [
+      "Er sorgte für durchsetzbare Mitspracher der Bevölkerung",
+      "Er verherrlichte Adolf Hitler und machte Kritik unmöglich",
+      "Er diente ausschließlich der Wahlwerbung der NSDAP",
+    ],
+    answerIndex: 1,
+  },
+  {
+    question: "Welche Konsequenzen drohen, wenn jemand verbotene nationalsozialistische Zeichen aus Spaß zeigt?",
+    options: [
+      "Geld- oder Freiheitsstrafe bis zu 3 Jahren und Eintrag ins Führungszeugnis",
+      "Nur eine mündliche Verwarnung",
+      "Keine Konsequenzen, wenn es ein Scherz gemeint war",
+    ],
+    answerIndex: 0,
+  },
 ];
+
 
 export default function Quiz() {
   const [current, setCurrent] = useState(0);

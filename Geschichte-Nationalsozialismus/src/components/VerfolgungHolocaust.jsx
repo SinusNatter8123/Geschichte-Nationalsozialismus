@@ -16,7 +16,7 @@ export default function VerfolgungHolocaust() {
 
         <p className="text-lg leading-relaxed mb-6 text-gray-300 text-center max-w-3xl mx-auto">
           Der Nationalsozialismus führte zu einem beispiellosen Verbrechen gegen die Menschlichkeit:
-          Die systematische Verfolgung, Entrechtung und Ermordung von Millionen von Menschen.
+          Die systematische Verfolgung und Ermordung von Millionen von Menschen.
           Jüdinnen und Juden, Sinti und Roma, Homosexuelle, politische Gegner*innen und viele weitere Minderheiten
           wurden Opfer eines brutalen Regimes.
         </p>
@@ -28,8 +28,8 @@ export default function VerfolgungHolocaust() {
         </p>
 
         <p className="text-lg leading-relaxed mb-6 text-gray-300 text-center max-w-3xl mx-auto">
-          Diese Verfolgung war nicht nur eine Folge von Hass, sondern ein hochgradig organisiertes, staatlich gelenktes System der Vernichtung.
-          Es ist wichtig, diese Geschichte zu kennen, um zu verstehen, warum nationalsozialistische Symbole und Ideologien so gefährlich sind.
+          Diese Verfolgung war nicht nur eine Folge von Hass, sondern ein hochgradig organisiertes, staatlich gelenktes System der Vernichtung von Menschenmassen.
+          Es ist wichtig, diese Geschichte zu kennen, um zu verstehen, warum nationalsozialistische Symbole und Ideologien so gefährlich und auch verboten sind.
         </p>
 
         <motion.div

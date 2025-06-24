@@ -45,25 +45,7 @@ export default function NationalsozialismusHeute() {
         Auf dieser Seite gehen wir diesen Fragen nach – Schritt für Schritt.
       </motion.p>
 
-      {/* Scroll-Hinweis */}
-      <motion.div
-        className="absolute bottom-8 flex flex-col items-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 1 }}
-      >
-        <span className="text-sm text-gray-500 mb-2">Scroll weiter</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{
-            repeat: Infinity,
-            duration: 1.5,
-            ease: 'easeInOut',
-          }}
-        >
-          <ChevronDown className="w-6 h-6 text-gray-400" />
-        </motion.div>
-      </motion.div>
+      
     </section>
   );
 }

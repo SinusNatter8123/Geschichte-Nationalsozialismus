@@ -22,7 +22,7 @@ export default function WasIstNationalsozialismus() {
         transition={{ delay: 0.1, duration: 0.6 }}
       >
         Der Nationalsozialismus war eine politische Ideologie und Bewegung, die Deutschland in den 1930er und 40er Jahren prägte. 
-        Die NSDAP unter Adolf Hitler strebte nach totalitärer Kontrolle, basierend auf rassistischen und antisemitischen Überzeugungen.
+        Die NSDAP strebte unter Adolf Hitler nach totaler Kontrolle, basierend auf rassistischen und antisemitischen Überzeugungen.
       </motion.p>
 
       <motion.p
@@ -53,8 +53,9 @@ export default function WasIstNationalsozialismus() {
         {[
           'Verfolgung und Ermordung von Millionen Juden, Sinti und Roma, Homosexuellen und politischen Gegnern',
           'Aggressive Expansion Europas durch Kriege und Besetzung',
-          'Errichtung von Konzentrationslagern mit systematischer Tötung',
+          'Errichtung von Konzentrationslagern mit systematischer Vernichtung',
           'Medienkontrolle und Propagandamaschinerie zur Meinungslenkung',
+
         ].map((text, index) => (
           <motion.li
             key={index}
